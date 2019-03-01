@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2016 Google Inc. All rights reserved.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+      https://www.apache.org/licenses/LICENSE-2.0
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html>
+  <head>
+    <title>Full Text Search via Algolia and Cloud Firestore</title>
+    <style>
+      #content > * {
+        width: 600px;
+        clear: both;
+      }
+
+      #results > li:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <textarea id="note-text"></textarea>
+      <button id="do-add-note">Add Note to Firestore / Algolia</button>
+      <br /><br />
+      <input type="text" id="query-text" placeholder="Search your notes..." />
+      <button id="do-query">Search</button>
+      <br />
+      <h3>Results</h3>
+      <ul id="results"></ul>
+      <br />
+      <b
+        >Make sure to follow setup steps in the
+        <a href="https://firebase.google.com/docs/firestore/solutions/search"
+          >documentation</a
+        > </b
+      ><br /><br />
+      <i>
+        Open your JavaScript console for helpful errors.
+        <br /><br />
+        Indexing can take several seconds and may require a page refresh for
+        new<br />
+        notes to appear due to Algolia's search client caching results.
+      </i>
+    </div>
+
+    <!-- Import the Algolia SDK -->
+    <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase-firestore.js"></script>
+
+    <script></script>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
