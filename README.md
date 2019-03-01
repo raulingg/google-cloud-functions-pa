@@ -1,7 +1,11 @@
-# Playing around with Firebase Cloud functions and Algolia
+# Full-text search example
+
+> **Playing around with Firebase Cloud functions and Algolia**
 
 Play around with examples from "firebase-functions" github repository in this case
 working with Algolia search engine, Firestore and Firebase Cloud functions for reaching full text search
+
+:red_circle: [LIVE DEMO](https://cloud-functions-pa.firebaseapp.com/)
 
 ## Requirements
 
